@@ -1,6 +1,11 @@
 
 <div class="container">
-  <h2 class=""><%= @my_total_cashback %></h2>
+  <div class="cashback-balance">
+    <div class=""></div>
+    <div class="">
+      <h2 class="">Meu saldo de cashback :  R$ <%= number_with_precision(@my_total_cashback, precision: 2) %></h2>
+    </div>
+  </div>
 </div>
 
 <%= render 'userDash' %>
