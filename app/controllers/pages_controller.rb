@@ -26,7 +26,21 @@ class PagesController < ApplicationController
 
       @my_total_cashback = @cash_total + @credit_card
     end
+  end
 
+  def admin
+    @companies_count = Company.all.count
+    @tickets_sold = Order.all.count
+    @orders = Order.all
+
+    @total_earning = 0
+
+    @earnings = @orders.each do |cash|
+      @price = cash.ticket.price.to_f
+      @quantity = cash.quantity.to_f
+
+      @total_earning += (@price * @quantity)
+    end
   end
 
 end

@@ -1,0 +1,24 @@
+<div class="bg-dash">
+</div>
+
+<div class="container pt-5">
+
+  <h2>Informações gerais:</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Total de empresas na plataforma</th>
+        <th scope="col">Total de ingressos Vendidos</th>
+        <th scope="col">Vendas totais</th>
+      </tr>
+    </thead>
+    <tbody>
+      <th scope="row">1</th>
+      <td><%= @companies_count %></td>
+      <td><%= @tickets_sold %></td>
+      <td>R$ <%= number_with_precision(@total_earning, precision: 2) %></td>
+    </tbody>
+  </table>
+
+</div>
