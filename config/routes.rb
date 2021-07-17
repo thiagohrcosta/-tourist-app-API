@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :tickets, only: [:show, :create, :dashboard] do
     resources :orders
   end
+
+  resources :dashboards, only: [:show, :new, :create]
 end

@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @tickets = Ticket.all
     @order = Order.new
+    @dashboard = Dashboard.all
   end
 
 end

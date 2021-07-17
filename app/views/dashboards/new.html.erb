@@ -1,0 +1,6 @@
+<h1>Quero acompanhar meus pedidos</h1>
+
+<%= simple_form_for @dashboard do |f| %>
+  <%= f.input :name, label: "Nome do Dashboard:" %>
+  <%= f.submit "Acompanhar", class: "btn btn-create w-100" %>
+<% end %>
