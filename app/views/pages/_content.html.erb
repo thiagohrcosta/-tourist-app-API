@@ -10,7 +10,7 @@
         <p><%= ticket.name %></p>
         <p class="ticket-price">R$ <%= number_with_precision(ticket.price, precision: 2) %></p>
       </div>
-      <%= link_to "Comprar ticket com #{number_with_precision(ticket.cashback * 100, precision: 0)} % de cashback " , "#", class: "btn-buy-ticket" %>
+      <%= link_to "Detalhes" , ticket_path(ticket.id), class: "btn-buy-ticket" %>
 
     </div>
     <% end %>
