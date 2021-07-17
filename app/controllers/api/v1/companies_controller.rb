@@ -1,5 +1,5 @@
 class Api::V1::CompaniesController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update ]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create ]
   before_action :set_company, only: [:show, :update]
 
   def index
@@ -8,6 +8,16 @@ class Api::V1::CompaniesController < Api::V1::BaseController
   end
 
   def show;end
+
+  def create
+    @company = Company.new(company_params)
+    authorize @company
+    if @company.save
+      render :show, status: :created
+    else
+      render_error
+    end
+  end
 
   def update
     if @company.update(company_params)
