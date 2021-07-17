@@ -1,11 +1,16 @@
+<div class="bg-dash">
+</div>
 
 <div class="container">
-  <div class="cashback-balance">
-    <div class=""></div>
-    <div class="">
-      <h2 class="">Meu saldo de cashback :  R$ <%= number_with_precision(@my_total_cashback, precision: 2) %></h2>
+  <div class="bg-cash-balance">
+    <div class="cashback-balance">
+      <div class=""></div>
+      <div class="">
+        <h2 class="">Meu saldo de cashback :  R$ <%= number_with_precision(@my_total_cashback, precision: 2) %></h2>
+      </div>
     </div>
+
+    <%= render 'userDash' %>
   </div>
 </div>
 
-<%= render 'userDash' %>
