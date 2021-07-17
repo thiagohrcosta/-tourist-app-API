@@ -6,6 +6,8 @@ class Api::V1::CompaniesController < Api::V1::BaseController
     authorize @companies
   end
 
+  def show;end
+
   private
 
   def set_company
