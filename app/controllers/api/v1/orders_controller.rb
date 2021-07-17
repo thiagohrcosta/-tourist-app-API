@@ -1,6 +1,7 @@
 class Api::V1::OrdersController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show ]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create ]
   before_action :set_order, only: [:show, :update]
+  before_action :set_ticket, only: [:create, :update]
 
   def index
     @orders = policy_scope(Order)
@@ -8,6 +9,16 @@ class Api::V1::OrdersController < Api::V1::BaseController
   end
 
   def show;end
+
+  def create
+    @order = Order.new(order_params)
+    authorize @order
+    if @order.save
+      render :show, status: :created
+    else
+      render_error
+    end
+  end
 
   def update
     if @order.update(order_params)
@@ -22,6 +33,10 @@ class Api::V1::OrdersController < Api::V1::BaseController
   def set_order
     @order = Order.find(params[:id])
     authorize @order
+  end
+
+  def set_ticket
+    @ticket = Ticket.find(params[:id])
   end
 
   def order_params
