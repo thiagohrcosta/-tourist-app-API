@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-  resources :dashboards, only: [:show, :new, :create]
+  get "dashboard", to: "pages#dashboard"
 end

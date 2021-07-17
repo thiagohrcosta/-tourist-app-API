@@ -15,11 +15,7 @@
         <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item">
-        <% if user_signed_in? && @dashboard == nil? %>
-          <%= link_to "Dashboard", new_dashboard_path %>
-        <% else %>
-          <%= link_to "Dashboard", dashboard_path(1) %>
-        <% end %>
+        <%= link_to "Dashboard", dashboard_path %>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

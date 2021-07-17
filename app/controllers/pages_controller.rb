@@ -7,4 +7,9 @@ class PagesController < ApplicationController
     @dashboard = Dashboard.all
   end
 
+  def dashboard
+    @orders = Order.all
+    @my_orders = Order.joins(:user).where(orders: {user_id: current_user.id})
+  end
+
 end
