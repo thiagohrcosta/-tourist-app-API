@@ -18,20 +18,25 @@ User.create!(
   password: "123456"
 )
 
+User.create!(
+  email: "travel@admin.com",
+  password: "123456"
+)
+
 Company.create!(
-  user_id: 1,
+  user_id: 4,
   logo: "https://res.cloudinary.com/dloadb2bx/image/upload/v1626368476/images_iqvkeh.png",
   name: "Fornecedor 1"
 )
 
 Company.create!(
-  user_id: 2,
+  user_id: 4,
   logo: "https://res.cloudinary.com/dloadb2bx/image/upload/v1626485606/images_nggvmp.png",
   name: "Fornecedor 2"
 )
 
 Company.create!(
-  user_id: 3,
+  user_id: 4,
   logo: "https://res.cloudinary.com/dloadb2bx/image/upload/v1626485737/aviation_logo-22_bq764w.jpg",
   name: "Fornecedor 3"
 )
