@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Os melhores ingressos na região</h3>
+  <h1>Escolha o seu e divirta-se com sua família</h1>
+
+  <div class="ticket-container">
+    <% @tickets.each do |ticket| %>
+    <div class="ticket-card">
+      <img class="home-ticket-img" src="<%= ticket.photo %>" alt="">
+      <div class="ticket-content">
+        <p><%= ticket.name %></p>
+        <p class="ticket-price">R$ <%= number_with_precision(ticket.price, precision: 2) %></p>
+      </div>
+      <%= link_to "Comprar ticket com #{number_with_precision(ticket.cashback * 100, precision: 0)} % de cashback " , "#", class: "btn-buy-ticket" %>
+
+    </div>
+    <% end %>
+  </div>
+
+</div>
