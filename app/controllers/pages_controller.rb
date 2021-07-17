@@ -26,7 +26,34 @@ class PagesController < ApplicationController
 
       @my_total_cashback = @cash_total + @credit_card
     end
-
   end
+
+  def admin
+    @companies_count = Company.all.count
+    @count_users = User.all.count
+    @orders = Order.all
+
+    @total_earning = 0
+
+    @earnings = @orders.each do |cash|
+      @price = cash.ticket.price.to_f
+      @quantity = cash.quantity.to_f
+
+      @total_earning += (@price * @quantity)
+    end
+  end
+
+
+
+
+
+  # def company_sell
+  #   @company_query = ActiveRecord::Base.connection.execute("
+  #     select orders.id , orders.quantity , orders.ticket_id, companies.name
+  #     from orders
+  #     join tickets on orders.ticket_id = ticket_id
+  #     join companies on tickets.company_id = companies.id "
+  #     )
+  # end
 
 end

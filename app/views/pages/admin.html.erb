@@ -1,0 +1,59 @@
+<div class="bg-dash">
+</div>
+
+<div class="container pt-5">
+
+  <h2>Informações gerais:</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Total de empresas na plataforma</th>
+        <th scope="col">Total de usuárois cadastrados</th>
+        <th scope="col">Vendas totais</th>
+      </tr>
+    </thead>
+    <tbody>
+      <th scope="row">1</th>
+      <td><%= @companies_count %></td>
+      <td><%= @count_users %></td>
+      <td>R$ <%= number_with_precision(@total_earning, precision: 2) %></td>
+    </tbody>
+  </table>
+
+  <h2>Vendas unitárias:</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Vendedor</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Ingresso</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Preço unitário</th>
+        <th scope="col">Total do pedido</th>
+      </tr>
+    </thead>
+      <% @orders.each do |order| %>
+    <tbody>
+        <td><%= order.id %></td>
+        <td><%= order.ticket.company.name %></td>
+        <td><%= order.user.email %></td>
+        <td><%= order.ticket.name %></td>
+        <td><%= order.quantity %></td>
+        <td>R$ <%= number_with_precision(order.ticket.price, precision: 2) %></td>
+        <td>
+          <%= order.quantity * order.ticket.price %>
+        </td>
+      <% end %>
+
+
+    </tbody>
+  </table>
+
+
+
+
+
+
+</div>
