@@ -1,0 +1,25 @@
+<div
+  class="ticket-show-container"
+  style="background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(<%= @ticket.photo %>);"
+>
+
+</div>
+
+<div class="container pt-4">
+  <div class="ticket-show-card">
+
+    <div class="row">
+      <div class="col-lg-3">
+        <img class="img-ticket" src="<%= @ticket.photo %>" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2><%= @ticket.name %> - R$ <%= number_with_precision(@ticket.price, precision: 2) %></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a justo eu lectus viverra volutpat nec sed eros. Nulla sit amet sollicitudin quam. Cras dignissim blandit facilisis. Ut vitae lorem at massa placerat faucibus rhoncus in nibh. Phasellus non dui in ipsum efficitur pretium. Suspendisse potenti</p>
+      </div>
+      <div class="col-lg-3">
+        <%= link_to "Comprar", new_ticket_order_path(@ticket.id), class:"btn btn-primary w-100"  %>
+      </div>
+    </div>
+
+  </div>
+</div>

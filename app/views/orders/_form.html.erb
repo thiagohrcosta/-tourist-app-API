@@ -1,0 +1,6 @@
+<%= simple_form_for [@ticket, @order] do |f| %>
+  <%= f.input :quantity, label: "Unidades" %>
+  <%= f.association :ticket %>
+  <%= f.submit "Comprar", class: "btn btn-create w-100" %>
+
+<% end %>

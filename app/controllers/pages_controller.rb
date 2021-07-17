@@ -3,5 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @tickets = Ticket.all
+    @order = Order.new
   end
+
 end
