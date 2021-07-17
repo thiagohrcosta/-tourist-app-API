@@ -1,0 +1,27 @@
+<h3>filtro</h3>
+
+<div class="filter-content">
+  <div class="filter-form">
+    <%= search_form_for @q do |f| %>
+      <%= f.label :name, "Nome" %>
+      <%= f.collection_select :name_eq, Company.all, :name, :name, {include_blank: 'Todas as empresas'} %>
+      <%= f.submit "Buscar", class:"btn btn-primary" %>
+    <% end %>
+  </div>
+
+   <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+      </tr>
+    </thead>
+    <% @company.each do |company| %>
+      <tbody>
+        <tr>
+          <td><%= company.name %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+
+</div>
