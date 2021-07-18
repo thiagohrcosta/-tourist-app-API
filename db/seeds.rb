@@ -20,7 +20,8 @@ User.create!(
 
 User.create!(
   email: "travel@admin.com",
-  password: "123456"
+  password: "123456",
+  admin:true
 )
 
 Company.create!(
