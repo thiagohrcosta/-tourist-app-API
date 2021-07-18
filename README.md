@@ -16,6 +16,17 @@ O objetivo do presente projeto é desenvolver uma aplicação de cashback onde o
 **O que o administrador pode fazer?**
 - O administrador poderá visualizar informações gerais de compras, quantidade de ingressos vendidos;
 
+## Tecnologias utilizadas
+<img alt="Ruby" src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/> <img alt="Rails" src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"/> <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> <img alt="SASS" src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/> <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/> <img alt="Postgres" src ="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>
+
+**Gems utilizadas**
+ - [Devise](https://github.com/heartcombo/devise)
+ - [Pundit](https://github.com/varvet/pundit)
+ - [Simple Token Autentication](https://github.com/gonzalo-bulnes/simple_token_authentication)
+ - [Byebug](https://github.com/deivid-rodriguez/byebug)
+ - [Rspec](https://github.com/rspec/rspec-rails)
+ - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+
 ## Dados cadastrados
 Foram inseridos via seed três empresas, três tickets e diversos pedidos com unidades diferentes de forma a suprir os dados expostos, para maiores detalhes [acesse aqui](https://github.com/thiagohrcosta/tourist-app-API/blob/master/db/seeds.rb).
 
@@ -37,6 +48,7 @@ Para efetuar login e acessar com os usuários e dados já cadastrados utilize os
 ![Api](https://res.cloudinary.com/dloadb2bx/image/upload/v1626568577/Tourist1_fiv4vv.gif)
 
 O backend da aplicação foi desenvolvido no formato de uma API de forma a suprir os dados do frontend com os seguintes endpoints:
+
 
 **GET**
 
@@ -86,9 +98,13 @@ Obs: Para melhor utilização do projeto e testes, foi desabilitada a exigência
 
 ## Página de login e cadastro
 ![login](https://res.cloudinary.com/dloadb2bx/image/upload/v1626555420/tourismApp1_n6g0gg.png)
+O usuário não poderá prosseguir na plataforma vendo detalhes do ingresso salvo se devidamente logado na plataforma, para isso foi utilizada a gem **DEVISE**.
 
+## Página de pedidos
 ![CashbackImG](https://res.cloudinary.com/dloadb2bx/image/upload/v1626556480/touristApp3_twnnud.png)
 
-## Testes com RSPEC
-![test](https://res.cloudinary.com/dloadb2bx/image/upload/v1626568154/touristTest_qp7uae.png)
+Uma vez que o usuário esteja logado e tenha realizado compras no site, ele poderá ver as informações de seu ingresso bem como o total de pedido o Casback de 1% com pagamento pelo cartão e o cashback total fornecido pelas empresas anunciantes dos ingressos.
 
+## Testes com RSPEC
+Foram adicionados 15 testes unitários usando a gem **RSPEC**.
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1626568154/touristTest_qp7uae.png)
