@@ -1,7 +1,7 @@
 <div class="bg-dash">
 </div>
 
-<div class="container pt-5">
+<div class="container pb-5 pt-5">
 
   <h2>Informações gerais:</h2>
   <table class="table">
@@ -9,7 +9,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Total de empresas na plataforma</th>
-        <th scope="col">Total de usuárois cadastrados</th>
+        <th scope="col">Total de usuários cadastrados</th>
         <th scope="col">Vendas totais</th>
       </tr>
     </thead>
@@ -46,14 +46,6 @@
           R$ <%= number_with_precision(order.quantity * order.ticket.price, principal: 2) %>
         </td>
       <% end %>
-
-
     </tbody>
   </table>
-
-
-
-
-
-
 </div>

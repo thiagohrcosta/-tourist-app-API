@@ -1,5 +1,5 @@
 class Api::V1::CompaniesController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create, :destroy ]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :create, :update, :destroy ]
   before_action :set_company, only: [:show, :update, :destroy]
 
   def index

@@ -12,6 +12,12 @@
         <a href="/api/v1/orders" target="_blank">API Orders</a>
       </li>
       <li class="nav-item">
+        <% if user_signed_in? && current_user.admin ==  true %>
+          <%= link_to "Admin Dashboard", admin_path %>
+        <% end%>
+      </li>
+
+      <li class="nav-item">
         <%= link_to "Dashboard", dashboard_path, class: "li-dash" %>
       </li>
     </ul>
