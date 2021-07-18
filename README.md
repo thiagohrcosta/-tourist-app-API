@@ -44,6 +44,31 @@ Para efetuar login e acessar com os usuários e dados já cadastrados utilize os
 **Login:** "travel@admin.com" (usuário adicional com acesso ao painel de admin)
 **Password:**"123456"
 
+## Database
+![db](https://res.cloudinary.com/dloadb2bx/image/upload/v1626571265/touristDB_zwmk5j.png)
+
+**Company model**
+
+      belongs_to :user
+      has_many :tickets
+      validates :name, :logo, :user_id, presence: true
+
+**Ticket model**
+
+      belongs_to :company
+      has_many :orders
+      validates :company_id, :name, :photo, :price, :cashback, presence: true
+      validates :price, :cashback, numericality: true
+
+   **Order model**
+
+      belongs_to :ticket
+      belongs_to :user
+      has_many :tickets
+      validates :user_id, :ticket_id, :quantity, presence: true
+      validates :quantity, numericality: true
+
+
 ## API
 ![Api](https://res.cloudinary.com/dloadb2bx/image/upload/v1626568577/Tourist1_fiv4vv.gif)
 
@@ -108,3 +133,32 @@ Uma vez que o usuário esteja logado e tenha realizado compras no site, ele pode
 ## Testes com RSPEC
 Foram adicionados 15 testes unitários usando a gem **RSPEC**.
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1626568154/touristTest_qp7uae.png)
+
+## Etapas de desenvolvimento
+
+**16 de julho**
+
+    - Projeto criado em Rails;
+    - Devise instalado;
+    - Pundit instalado;
+    - Modelos Company, Ticket, Order adicionados;
+    - Setup inicial da API configurados;
+    - Pundt policy adicionada (liberada para melhor utilização do projeto);
+    - Controllers e Views(JSON) para a API criados;
+
+**17 de julho**
+
+    - Seed adicionado;
+    - Ações adicionadas aos controllers;
+    - Show endpoint adicionado;;
+    - Simple token adicionado;
+    - Endpoints adicionados;
+    - Home page inicial implementada;
+    - Show page adicionada com informações básicas;
+    - Exibe as "Orders";
+    - Correção na rota Dashboard;
+    - Corrige rotas na navbar;
+    - Implementa lógica na *View(provisória)* e definitiva no controller para calcular o cashback;
+    - Adiciona página de login e cadastro;
+    - Substitui "carousel slide" por imagem estática e texto;
+    - Adiciona página com dashboard geral de vendas;
