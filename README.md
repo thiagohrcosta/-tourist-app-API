@@ -119,6 +119,7 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
 
 **DESTROY**
 ![imgDestroy](https://res.cloudinary.com/dloadb2bx/image/upload/v1626574242/touristAPIblock_rdk4ra.png)
+![imgDestroy2](https://res.cloudinary.com/dloadb2bx/image/upload/v1626574498/touristDelete_ntzduv.png)
 Com pundit e devise é possível bloquear acesso ou exigir login para determinadas ações, contudo por questões práticas após o teste que pode ser visto acima, essas opções deixaram de ser exigidas.
 
 
