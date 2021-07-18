@@ -1,6 +1,6 @@
 class Api::V1::OrdersController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create ]
-  before_action :set_order, only: [:show, :update]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create, :destroy ]
+  before_action :set_order, only: [:show, :update, :destroy]
   before_action :set_ticket, only: [:create, :update]
 
   def index
@@ -26,6 +26,12 @@ class Api::V1::OrdersController < Api::V1::BaseController
     else
       render_error
     end
+  end
+
+
+  def destroy
+    @order.destroy
+    head :no_content
   end
 
   private

@@ -20,4 +20,11 @@ class CompanyPolicy < ApplicationPolicy
   def update?
     true
   end
+
+  def destroy?
+    true
+    # adicionado true para testes
+    # exigir que o current_user.id seja igual o company.user_id
+    # para permitir a exclusão
+  end
 end

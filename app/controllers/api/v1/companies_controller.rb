@@ -1,6 +1,6 @@
 class Api::V1::CompaniesController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create ]
-  before_action :set_company, only: [:show, :update]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create, :destroy ]
+  before_action :set_company, only: [:show, :update, :destroy]
 
   def index
     @companies = policy_scope(Company)
@@ -25,6 +25,11 @@ class Api::V1::CompaniesController < Api::V1::BaseController
     else
       render_error
     end
+  end
+
+  def destroy
+    @company.destroy
+    head :no_content
   end
 
   private
