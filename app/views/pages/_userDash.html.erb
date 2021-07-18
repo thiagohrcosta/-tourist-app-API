@@ -31,7 +31,7 @@
             <td></td>
             <td></td>
             <td><strong>Total:</strong></td>
-            <td>R$ <%= @final_price %></td>
+            <td>R$ <%= number_with_precision(@final_price, precision: 2) %></td>
           </tr>
         <tr>
             <th scope="row"></th>

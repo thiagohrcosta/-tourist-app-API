@@ -97,6 +97,13 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
     (...)]
 
 
+**CREATE**
+
+    http://localhost:3000/api/v1/companies
+    http://localhost:3000/api/v1/tickets
+    http://localhost:3000/api/v1/orders
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1626614797/travelPostApi_zgcf3a.png)
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1626615255/touristOrder_oyuq6u.png)
 **SHOW**
 
     http://localhost:3000/api/v1/companies/:id
@@ -127,7 +134,7 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
 **DESTROY**
 ![imgDestroy](https://res.cloudinary.com/dloadb2bx/image/upload/v1626574242/touristAPIblock_rdk4ra.png)
 ![imgDestroy2](https://res.cloudinary.com/dloadb2bx/image/upload/v1626574498/touristDelete_ntzduv.png)
-Com pundit e devise é possível bloquear acesso ou exigir login para determinadas ações, contudo por questões práticas após o teste que pode ser visto acima, essas opções deixaram de ser exigidas.
+Com **PUNDIT**e **DEVISE** é possível bloquear acesso ou exigir login para determinadas ações, contudo por questões práticas após o teste que pode ser visto acima, essas opções deixaram de ser exigidas.
 
 
 
@@ -174,6 +181,12 @@ Foram adicionados 15 testes unitários usando a gem **RSPEC**.
     - Adiciona página com dashboard geral de vendas;
     - Adicionado Endpoint para destroy (exigência de login deixaram de ser exigidas para melhor teste do projeto)
     - Deploy no Heroku
+
+**17 de julho**
+
+    - Correção de bug na rota POST da API;
+    - Pequenos ajustes no Frontend;
+    - Adição de campo "admin" na tabela usuário.
 
 ## Como rodar este projeto?
 
