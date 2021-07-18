@@ -43,7 +43,7 @@
         <td><%= order.quantity %></td>
         <td>R$ <%= number_with_precision(order.ticket.price, precision: 2) %></td>
         <td>
-          <%= order.quantity * order.ticket.price %>
+          R$ <%= number_with_precision(order.quantity * order.ticket.price, principal: 2) %>
         </td>
       <% end %>
 
