@@ -141,27 +141,28 @@ Foram adicionados 15 testes unitários usando a gem **RSPEC**.
 
 **16 de julho**
 
-  - Projeto criado em Rails;
-  - Devise instalado;
-  - Pundit instalado;
-  - Modelos Company, Ticket, Order adicionados;
-  - Setup inicial da API configurados;
-  - Pundt policy adicionada (liberada para melhor utilização do projeto);
-  - Controllers e Views(JSON) para a API criados;
+    - Projeto criado em Rails;
+    - Devise instalado;
+    - Pundit instalado;
+    - Modelos Company, Ticket, Order adicionados;
+    - Setup inicial da API configurados;
+    - Pundt policy adicionada (liberada para melhor utilização do projeto);
+    - Controllers e Views(JSON) para a API criados;
 
 **17 de julho**
 
-  - Seed adicionado;
-  - Ações adicionadas aos controllers;
-  - Show endpoint adicionado;;
-  - Simple token adicionado;
-  - Endpoints adicionados;
-  - Home page inicial implementada;
-  - Show page adicionada com informações básicas;
-  - Exibe as "Orders";
-  - Correção na rota Dashboard;
-  - Corrige rotas na navbar;
-  - Implementa lógica na *View(provisória)* e definitiva no controller para calcular o cashback;
-  - Adiciona página de login e cadastro;
-  - Substitui "carousel slide" por imagem estática e texto;
-  - Adiciona página com dashboard geral de vendas;
+    - Seed adicionado;
+    - Ações adicionadas aos controllers;
+    - Show endpoint adicionado;;
+    - Simple token adicionado;
+    - Endpoints adicionados;
+    - Home page inicial implementada;
+    - Show page adicionada com informações básicas;
+    - Exibe as "Orders";
+    - Correção na rota Dashboard;
+    - Corrige rotas na navbar;
+    - Implementa lógica na *View(provisória)* e definitiva no controller para calcular o cashback;
+    - Adiciona página de login e cadastro;
+    - Substitui "carousel slide" por imagem estática e texto;
+    - Adiciona página com dashboard geral de vendas;
+    - Adicionado Endpoint para destroy (exigência de login deixaram de ser exigidas para melhor teste do projeto)
