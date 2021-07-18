@@ -41,7 +41,8 @@ Para efetuar login e acessar com os usuários e dados já cadastrados utilize os
 **Login:** admin3@admin.com" (não possui pedidos)
 **Password:** "123456"
 
-**Login:** "travel@admin.com" (usuário adicional com acesso ao painel de admin)
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1626575873/touristadmin_nvjd5w.png)
+**Login:** "travel@admin.com" (usuário adicional com acesso ao painel de admin -> http\://localhost:3000/admin)
 **Password:**"123456"
 
 ## Database
@@ -166,3 +167,7 @@ Foram adicionados 15 testes unitários usando a gem **RSPEC**.
     - Substitui "carousel slide" por imagem estática e texto;
     - Adiciona página com dashboard geral de vendas;
     - Adicionado Endpoint para destroy (exigência de login deixaram de ser exigidas para melhor teste do projeto)
+    - Deploy no Heroku
+
+## Como rodar este projeto?
+
