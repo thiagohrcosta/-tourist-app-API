@@ -1,5 +1,5 @@
 class Api::V1::TicketsController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create ]
+  acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create, :destroy ]
   before_action :set_ticket, only: [:show]
 
   def index
@@ -25,6 +25,11 @@ class Api::V1::TicketsController < Api::V1::BaseController
     else
       render_error
     end
+  end
+
+  def destroy
+    @ticket.destroy
+    head :no_content
   end
 
   private

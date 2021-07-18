@@ -117,8 +117,10 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
         "name": "Tourism 4All"
       }
 
+**DESTROY**
+![imgDestroy](https://res.cloudinary.com/dloadb2bx/image/upload/v1626574242/touristAPIblock_rdk4ra.png)
+Com pundit e devise é possível bloquear acesso ou exigir login para determinadas ações, contudo por questões práticas após o teste que pode ser visto acima, essas opções deixaram de ser exigidas.
 
-Obs: Para melhor utilização do projeto e testes, foi desabilitada a exigência de login para realizar tais ações no controller.
 
 
 ## Página de login e cadastro
@@ -138,27 +140,27 @@ Foram adicionados 15 testes unitários usando a gem **RSPEC**.
 
 **16 de julho**
 
-    - Projeto criado em Rails;
-    - Devise instalado;
-    - Pundit instalado;
-    - Modelos Company, Ticket, Order adicionados;
-    - Setup inicial da API configurados;
-    - Pundt policy adicionada (liberada para melhor utilização do projeto);
-    - Controllers e Views(JSON) para a API criados;
+  - Projeto criado em Rails;
+  - Devise instalado;
+  - Pundit instalado;
+  - Modelos Company, Ticket, Order adicionados;
+  - Setup inicial da API configurados;
+  - Pundt policy adicionada (liberada para melhor utilização do projeto);
+  - Controllers e Views(JSON) para a API criados;
 
 **17 de julho**
 
-    - Seed adicionado;
-    - Ações adicionadas aos controllers;
-    - Show endpoint adicionado;;
-    - Simple token adicionado;
-    - Endpoints adicionados;
-    - Home page inicial implementada;
-    - Show page adicionada com informações básicas;
-    - Exibe as "Orders";
-    - Correção na rota Dashboard;
-    - Corrige rotas na navbar;
-    - Implementa lógica na *View(provisória)* e definitiva no controller para calcular o cashback;
-    - Adiciona página de login e cadastro;
-    - Substitui "carousel slide" por imagem estática e texto;
-    - Adiciona página com dashboard geral de vendas;
+  - Seed adicionado;
+  - Ações adicionadas aos controllers;
+  - Show endpoint adicionado;;
+  - Simple token adicionado;
+  - Endpoints adicionados;
+  - Home page inicial implementada;
+  - Show page adicionada com informações básicas;
+  - Exibe as "Orders";
+  - Correção na rota Dashboard;
+  - Corrige rotas na navbar;
+  - Implementa lógica na *View(provisória)* e definitiva no controller para calcular o cashback;
+  - Adiciona página de login e cadastro;
+  - Substitui "carousel slide" por imagem estática e texto;
+  - Adiciona página com dashboard geral de vendas;
