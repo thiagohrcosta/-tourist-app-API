@@ -1,3 +1,4 @@
+
 # TOURIST APP
 
 ![mainIMG](https://res.cloudinary.com/dloadb2bx/image/upload/v1626556361/touristApp2_rncoc1.png)
@@ -26,6 +27,11 @@ O objetivo do presente projeto é desenvolver uma aplicação de cashback onde o
  - [Byebug](https://github.com/deivid-rodriguez/byebug)
  - [Rspec](https://github.com/rspec/rspec-rails)
  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+
+**Versões**
+
+- Ruby (2.6.6)
+- Rails (6.1.4)
 
 ## Dados cadastrados
 Foram inseridos via seed três empresas, três tickets e diversos pedidos com unidades diferentes de forma a suprir os dados expostos, para maiores detalhes [acesse aqui](https://github.com/thiagohrcosta/tourist-app-API/blob/master/db/seeds.rb).
@@ -171,3 +177,15 @@ Foram adicionados 15 testes unitários usando a gem **RSPEC**.
 
 ## Como rodar este projeto?
 
+Para ver o projeto rodando no **HEROKU** [clique aqui](https://touristapi-app.herokuapp.com/).
+Caso você já tenha instalado o Ruby on Rails nas versões apontadas no início, após efetuar o download do projeto é necessário rodar os seguintes comandos dentro da pasta do arquivo:
+
+-   yarn install;
+-   bundle install;
+
+Em seguida para iniciar o banco de dados é necessário rodar os seguintes comandos:
+
+-   rails db:create (caso o banco de dados não esteja criado);
+-   rails db:migrante (para implementar as migrações no bando de dados);
+
+Persistindo erros relacionados ao banco de dados rode no terminal o comando  `rails db:reset`. Ao final rode o comando  `rails s`  para iniciar a aplicação em  `localhost:3000`.
