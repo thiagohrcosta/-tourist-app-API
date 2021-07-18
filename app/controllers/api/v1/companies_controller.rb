@@ -1,5 +1,7 @@
 class Api::V1::CompaniesController < Api::V1::BaseController
+  # Act as a token seria apenas para index e show, foi usado except geral para testes
   acts_as_token_authentication_handler_for User, except: [ :index, :show, :update, :create, :destroy ]
+
   before_action :set_company, only: [:show, :update, :destroy]
 
   def index

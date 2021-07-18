@@ -23,5 +23,4 @@ class TicketsController < ApplicationController
   def ticket_params
     params.require(:ticket).permit(:company_id, :photo, :price, :cashback)
   end
-
 end
