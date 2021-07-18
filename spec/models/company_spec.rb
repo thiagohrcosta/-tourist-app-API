@@ -61,5 +61,6 @@ RSpec.describe Company, type: :model do
 
     context "Company associations" do
       it {should validate_presence_of(:user_id)}
+      it {should have_many(:tickets)}
     end
 end
