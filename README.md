@@ -43,7 +43,6 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
     http://localhost:3000/api/v1/companies
     http://localhost:3000/api/v1/tickets
     http://localhost:3000/api/v1/orders
-
   GET: http://localhost:3000/api/v1/orders
   RESPONSE: [{
     "id": 1,
@@ -59,7 +58,6 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
     http://localhost:3000/api/v1/companies/:id
     http://localhost:3000/api/v1/tickets/:id
     http://localhost:3000/api/v1/orders/:id
-
   GET: http://localhost:3000/api/v1/tickets/1
   RESPONSE:{
       "id": 1,
@@ -74,7 +72,6 @@ O backend da aplicação foi desenvolvido no formato de uma API de forma a supri
     http://localhost:3000/api/v1/companies/:id
     http://localhost:3000/api/v1/tickets/:id
     http://localhost:3000/api/v1/orders/:id
-
   PATCH: http://localhost:3000/api/v1/companies/1
   RESPONSE: {
         "id": 1,
